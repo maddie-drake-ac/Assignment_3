@@ -1,0 +1,43 @@
+/*
+  * Student Name: Maddie Drake 
+  * Student ID: 041141815
+  * Course: CST8117 - Cross-Platform Web Design
+  * Semester: 1 Winter 2024
+  * Assignment: 2
+  * Date Submitted: March 12, 2024.
+*/
+
+.product-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 2fr;
+    gap: 2rem 2rem;
+    margin: 2rem;
+    list-style: none;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 700;
+    padding-top: 2rem;
+    
+  }
+  
+.product-list li {
+    margin: 0.75rem;
+    padding: 0.75rem;
+    border: 2px solid rgb(255, 252, 210);
+    background-color: indigo;
+    border-radius: 8rem;
+    /*text-align: center;*/
+    
+  }
+  
+  .product-tile {
+    display: flex;
+    height: 6rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .title_block {
+    padding: 2rem;
+    
+  }
