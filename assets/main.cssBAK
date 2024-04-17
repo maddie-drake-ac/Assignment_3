@@ -1,0 +1,241 @@
+/*
+  * Student Name: Maddie Drake 
+  * Student ID: 041141815
+  * Course: CST8117 - Cross-Platform Web Design
+  * Semester: 1 Winter 2024
+  * Assignment: 2
+  * Date Submitted: March 12, 2024.
+*/
+
+/* css reset */ /* reset defaults to 0 and 100% */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
+/* set the background image for the whole page */
+body {
+    /*background-image: url('../images/serene_beach.png'); *//*https://www.craiyon.com/image/WYm76cTrSvaLKsAA0iUIMA*/
+    background: indigo url('../images/serene_beach.png');
+    overflow-x: hidden;
+}
+
+/* target the navigation list */
+.nav-list {
+    display: flex; /*https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+    justify-content: space-between;
+    font-family: 'Comfortaa', sans-serif;
+    padding: 1rem;
+    list-style: none;
+    position: fixed;
+  }
+
+/* target individual list items in the navigation list */
+.nav-list li {
+    padding: 0.75rem;
+    border: 1px solid rgb(255,252,210);
+    background-color: indigo;
+    border-radius: 1.5rem;
+}
+
+/* target search bar */
+.search-bar {
+  padding-right: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+.page-title {
+    padding: 2rem 2rem 0 2rem;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(255, 252, 210);
+}
+
+.page-title-2 {
+  font-size: 2rem;
+}
+
+/*https://www.w3schools.com/css/css-link.asp*/
+/* stylize links according to behaviour */
+a:link {
+  /*color: rgb(249, 245, 192);*/
+  color: rgb(255, 252, 210);
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(188, 185, 140);
+  text-decoration: none;
+}
+
+
+
+.bangle-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  padding-top: 2rem;
+  max-width: 50%;
+  max-height: 50%;
+}
+
+.footer {
+  display: flex;
+  justify-content:space-evenly;
+  font-family: 'Courier Prime', monospace;
+  padding: 2rem;
+  padding-top: 3rem;
+  list-style: none;
+  color: rgb(255, 252, 210);
+  /*color: rgb(139, 66, 46);*/
+  /*position: absolute; *//*https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/*/
+  /*bottom: 0;
+  width: 170vh;
+  height: 3vh;*/
+}
+
+.blurb {
+  /*display: flex;*/
+  font-family:'Comfortaa', sans-serif;
+  color: rgb(255, 252, 210);
+  text-align: center;
+  /*justify-content: space-around;*/
+  width: 50%
+}
+
+.blurb-box {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.search-box {
+  border-radius: 15px;
+  height: 30px;
+  background-image: url(../images/serene_beach.png);
+  color: white;
+}
+
+.button {
+  height: 24px;
+  width: 30px;
+  border-radius: 15px;
+  position: relative;
+  right: 30px;
+  background-color: rgb(220, 35, 128);
+  color: white;
+}
+
+.button:active {
+  color: indigo;
+}
+
+.price {
+  text-align: center;
+  font-size:2rem;
+  margin: 2rem;
+  color: rgb(255, 252, 210);
+  font-family:'Comfortaa', sans-serif;
+}
+
+#email {
+  font-style: normal;
+}
+
+/* ----------- Media Queries ---------------------- */
+
+@media only screen and (width <= 480px) and (orientation: portrait) {
+  .nav-list {
+    display: flex; /*https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+    justify-content: space-between;
+    font-family: 'Comfortaa', sans-serif;
+    padding: 1rem;
+    list-style: none;
+    bottom: 0;
+    width: 90%;
+  } 
+  .search-bar {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    }
+    .search-box {
+      border-radius: 40px;
+      height: 80px;
+      background-image: url(../images/serene_beach.png);
+      color: white;
+    }
+    .button {
+      height: 80px;
+      width: 80px;
+      border-radius: 40px;
+      position: relative;
+      right: 80px;
+      background-color: rgb(220, 35, 128);
+      color: white;
+    } 
+}
+
+@media only screen and (orientation: portrait) {
+  .page-title {
+    color: rgb(255, 252, 210);
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  .page-title {
+    color: rgb(255, 252, 210);
+  }
+  .nav-list {
+    display: flex; /*https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Comfortaa', sans-serif;
+    padding-top: 1rem;
+    list-style: none;
+  }
+
+  .nav-list li {
+    padding: 0.75rem;
+    border: 1px solid rgb(255,252,210);
+    background-color: indigo;
+    border-radius: 1.5rem;
+    max-width: 15%;
+    margin: 0.5rem;
+    text-align: center;
+  }
+  .search-box {
+    border-radius: 15px;
+    height: 30px;
+    background-image: url(../images/serene_beach.png);
+    color: white;
+  }
+
+  .button {
+    height: 24px;
+    width: 30px;
+    border-radius: 15px;
+    position: relative;
+    right: 30px;
+    background-color: rgb(220, 35, 128);
+    color: white;
+  } 
+  
+  .search-bar {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  }
+
+}
