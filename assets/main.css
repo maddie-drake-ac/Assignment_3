@@ -29,6 +29,7 @@ body {
     font-family: 'Comfortaa', sans-serif;
     padding: 1rem;
     list-style: none;
+    position: fixed;
   }
 
 /* target individual list items in the navigation list */
@@ -125,7 +126,7 @@ img {
 }
 
 .button {
-  height: 30px;
+  height: 24px;
   width: 30px;
   border-radius: 15px;
   position: relative;
@@ -135,7 +136,7 @@ img {
 }
 
 .button:active {
-  color: black;
+  color: indigo;
 }
 
 .price {
@@ -150,4 +151,91 @@ img {
   font-style: normal;
 }
 
+/* ----------- Media Queries ---------------------- */
 
+@media only screen and (width <= 480px) and (orientation: portrait) {
+  .nav-list {
+    display: flex; /*https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+    justify-content: space-between;
+    font-family: 'Comfortaa', sans-serif;
+    padding: 1rem;
+    list-style: none;
+    bottom: 0;
+    width: 90%;
+  } 
+  .search-bar {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    }
+    .search-box {
+      border-radius: 40px;
+      height: 80px;
+      background-image: url(../images/serene_beach.png);
+      color: white;
+    }
+    .button {
+      height: 80px;
+      width: 80px;
+      border-radius: 40px;
+      position: relative;
+      right: 80px;
+      background-color: rgb(220, 35, 128);
+      color: white;
+    } 
+}
+
+@media only screen and (orientation: portrait) {
+  .page-title {
+    color: rgb(255, 252, 210);
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  .page-title {
+    color: rgb(255, 252, 210);
+  }
+  .nav-list {
+    display: flex; /*https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Comfortaa', sans-serif;
+    padding-top: 1rem;
+    list-style: none;
+  }
+
+  .nav-list li {
+    padding: 0.75rem;
+    border: 1px solid rgb(255,252,210);
+    background-color: indigo;
+    border-radius: 1.5rem;
+    max-width: 15%;
+    margin: 0.5rem;
+    text-align: center;
+  }
+  .search-box {
+    border-radius: 15px;
+    height: 30px;
+    background-image: url(../images/serene_beach.png);
+    color: white;
+  }
+
+  .button {
+    height: 24px;
+    width: 30px;
+    border-radius: 15px;
+    position: relative;
+    right: 30px;
+    background-color: rgb(220, 35, 128);
+    color: white;
+  } 
+  
+  .search-bar {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  }
+
+}
