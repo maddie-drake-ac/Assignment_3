@@ -18,8 +18,9 @@
 /* set the background image for the whole page */
 body {
     /*background-image: url('../images/serene_beach.png'); *//*https://www.craiyon.com/image/WYm76cTrSvaLKsAA0iUIMA*/
-    background: indigo url('../images/serene_beach.png');
-    overflow-x: hidden;
+    background: indigo /* url('../images/serene_beach.png')*/;
+    /*overflow-x: hidden;*/
+    margin: 0;
 }
 
 /* target the navigation list */
@@ -87,13 +88,17 @@ img {
   max-width: 50%;
   max-height: 50%;
 }
-
+.logo {
+  width: 13%;
+  padding: 1em;
+  rotate: -15deg;
+}
 .footer {
   display: flex;
   justify-content:space-evenly;
   font-family: 'Courier Prime', monospace;
-  padding: 2rem;
-  padding-top: 3rem;
+  /*padding: 2rem;*/
+  /*padding-top: 3rem;*/
   list-style: none;
   color: rgb(255, 252, 210);
   /*color: rgb(139, 66, 46);*/
@@ -116,6 +121,10 @@ img {
   padding-top: 2rem;
   display: flex;
   justify-content: center;
+}
+
+.search-bar {
+  margin-top: 2em;
 }
 
 .search-box {
@@ -151,6 +160,130 @@ img {
   font-style: normal;
 }
 
+.bottom-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #bfac7c;
+  background:  url('../images/serene_beach.png');
+  height: 4rem;
+  padding: 0.75em;
+  bottom: 0;
+  margin-top: 1.5em;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 1.2rem;
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  margin: 0;
+  overflow: hidden;
+  
+}
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+  padding: 10em;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: rgb(255, 252, 210);
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+  margin-right: 3em;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transition: 400ms;
+  transform: rotate(45deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transition: 400ms;
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 700px) {
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    bottom: 0;
+    margin-top: 3em;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid indigo;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 800ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background: indigo url('../images/serene_beach.png');
+  }
+  
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+}
+
 /* ----------- Media Queries ---------------------- */
 
 @media only screen and (width <= 480px) and (orientation: portrait) {
@@ -163,7 +296,7 @@ img {
     bottom: 0;
     width: 90%;
   } 
-  .search-bar {
+  /* .search-bar {
     padding-top: 2rem;
     display: flex;
     justify-content: center;
@@ -182,8 +315,20 @@ img {
       position: relative;
       right: 80px;
       background-color: rgb(220, 35, 128);
-      color: white;
-    } 
+      color: white; 
+    }
+    .top-nav {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #57c5e7;
+      background: linear-gradient(to left, #f46b45, #eea849);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *//*
+      color: #FFF;
+      height: 50px;
+      padding: 1em;
+    } */
 }
 
 @media only screen and (orientation: portrait) {

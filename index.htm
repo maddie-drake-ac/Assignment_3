@@ -27,14 +27,6 @@
   </head>
   <body>
     <header>
-      <!--create navigation list-->
-      <nav>
-        <ul class="nav-list">
-          <li><a href="about-us.htm">About Us</a></li>
-          <li><a href="products.htm">Products</a></li>
-          <li><a href="cart.htm">Cart</a></li>
-        </ul>
-      </nav>
       <!--create search bar-->
       <div>
         <ul class="search-bar"> <!--https://www.w3schools.com/howto/howto_css_searchbar.asp-->
@@ -51,15 +43,26 @@
         </div>
       </div>   
       <p><h2 class="page-title"><a href="./products.htm" style="color: rgb(255, 252, 210)">Get Bigger Bangles!!</a></h2></p>
+          <!--create bottom nav bar-->
+      <section class="bottom-nav">
+        <div>
+          <a href="./index.htm"><img class="logo" src="./images/bigger_bangle_graphic.png"></a>
+        </div>
+ 
+        <input aria-label="clickable hamburger menu" id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+        <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+          <li><a href="about-us.htm">About Us</a></li>
+          <li><a href="products.htm">Products</a></li>
+          <li><a href="cart.htm">Cart</a></li>
+        </ul>
+        </section>
+        
     </main>
     <footer>
-      <div>
-        <ul class="footer">
-          <li>&copy; So Cheeese! 2024</li>
-          <li><address><a id="email" href="mailto:maddie@biggerbangles.biz">maddiedrake@biggerbangles.biz</a></address></li>
-          <li>Remember to always go out with a Bang!</li>
-        </ul>
-      </div>
+
 
     </footer>
   </body>
